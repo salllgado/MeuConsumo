@@ -20,7 +20,7 @@ struct CustomText: View {
     
     var body: some View {
         Text(text)
-            .foregroundColor(Color.black)
+            .foregroundColor(Color.darkBlueColor)
             .font(Font.system(size: 18, weight: textStyle))
     }
 }
