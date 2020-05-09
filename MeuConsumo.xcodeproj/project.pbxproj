@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80850AB2463855700D3940E /* CustomPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80850AA2463855600D3940E /* CustomPrimaryButton.swift */; };
 		B835B743245DD3E600BA661C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835B742245DD3E600BA661C /* AppDelegate.swift */; };
 		B835B745245DD3E600BA661C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835B744245DD3E600BA661C /* SceneDelegate.swift */; };
 		B835B747245DD3E600BA661C /* ConsumeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835B746245DD3E600BA661C /* ConsumeListView.swift */; };
@@ -20,9 +21,13 @@
 		B835B763245DDF7500BA661C /* ConsumeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B835B762245DDF7500BA661C /* ConsumeModel.swift */; };
 		B8429459245F047B00D0ACF7 /* InsertionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8429458245F047B00D0ACF7 /* InsertionView.swift */; };
 		B842945B245F0B3200D0ACF7 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842945A245F0B3200D0ACF7 /* ColorExtension.swift */; };
+		B8C0CB4A246765C1003BAF42 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0CB49246765C1003BAF42 /* PersistenceManager.swift */; };
+		B8C0CB4E246766E1003BAF42 /* MeuConsumo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8C0CB4C246766E1003BAF42 /* MeuConsumo.xcdatamodeld */; };
+		B8C9415624638D7900CA3F4B /* NavigationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C9415524638D7900CA3F4B /* NavigationBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B80850AA2463855600D3940E /* CustomPrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrimaryButton.swift; sourceTree = "<group>"; };
 		B835B73F245DD3E600BA661C /* MeuConsumo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeuConsumo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B835B742245DD3E600BA661C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B835B744245DD3E600BA661C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		B835B762245DDF7500BA661C /* ConsumeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumeModel.swift; sourceTree = "<group>"; };
 		B8429458245F047B00D0ACF7 /* InsertionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertionView.swift; sourceTree = "<group>"; };
 		B842945A245F0B3200D0ACF7 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		B8C0CB49246765C1003BAF42 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		B8C0CB4D246766E1003BAF42 /* ConsumeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConsumeModel.xcdatamodel; sourceTree = "<group>"; };
+		B8C9415524638D7900CA3F4B /* NavigationBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B80850AC2463885500D3940E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B842945A245F0B3200D0ACF7 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B835B736245DD3E600BA661C = {
 			isa = PBXGroup;
 			children = (
@@ -70,14 +86,16 @@
 		B835B741245DD3E600BA661C /* MeuConsumo */ = {
 			isa = PBXGroup;
 			children = (
+				B8C0CB4B246766CE003BAF42 /* Persistence */,
 				B835B765245DE39D00BA661C /* App */,
+				B80850AC2463885500D3940E /* Extensions */,
 				B835B761245DDF6200BA661C /* Model */,
 				B835B75C245DDBC700BA661C /* Style */,
 				B8429457245F044500D0ACF7 /* View */,
 				B835B748245DD3E800BA661C /* Assets.xcassets */,
 				B835B74D245DD3E800BA661C /* LaunchScreen.storyboard */,
 				B835B74A245DD3E800BA661C /* Preview Content */,
-				B842945A245F0B3200D0ACF7 /* ColorExtension.swift */,
+				B8C0CB49246765C1003BAF42 /* PersistenceManager.swift */,
 			);
 			path = MeuConsumo;
 			sourceTree = "<group>";
@@ -112,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				B835B75D245DDBD100BA661C /* CustomText.swift */,
+				B80850AA2463855600D3940E /* CustomPrimaryButton.swift */,
+				B8C9415524638D7900CA3F4B /* NavigationBarButton.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -158,6 +178,14 @@
 				B8429456245F043300D0ACF7 /* InsertionView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B8C0CB4B246766CE003BAF42 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				B8C0CB4C246766E1003BAF42 /* MeuConsumo.xcdatamodeld */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,13 +260,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B835B763245DDF7500BA661C /* ConsumeModel.swift in Sources */,
+				B8C9415624638D7900CA3F4B /* NavigationBarButton.swift in Sources */,
 				B835B743245DD3E600BA661C /* AppDelegate.swift in Sources */,
 				B835B745245DD3E600BA661C /* SceneDelegate.swift in Sources */,
+				B8C0CB4E246766E1003BAF42 /* MeuConsumo.xcdatamodeld in Sources */,
 				B835B75B245DD75900BA661C /* ConsumeListViewCell.swift in Sources */,
+				B8C0CB4A246765C1003BAF42 /* PersistenceManager.swift in Sources */,
 				B835B760245DDE1200BA661C /* DetailView.swift in Sources */,
 				B835B747245DD3E600BA661C /* ConsumeListView.swift in Sources */,
 				B835B758245DD46200BA661C /* ConsumeListViewModel.swift in Sources */,
 				B8429459245F047B00D0ACF7 /* InsertionView.swift in Sources */,
+				B80850AB2463855700D3940E /* CustomPrimaryButton.swift in Sources */,
 				B835B75E245DDBD100BA661C /* CustomText.swift in Sources */,
 				B842945B245F0B3200D0ACF7 /* ColorExtension.swift in Sources */,
 			);
@@ -432,6 +464,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8C0CB4C246766E1003BAF42 /* MeuConsumo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8C0CB4D246766E1003BAF42 /* ConsumeModel.xcdatamodel */,
+			);
+			currentVersion = B8C0CB4D246766E1003BAF42 /* ConsumeModel.xcdatamodel */;
+			path = MeuConsumo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B835B737245DD3E600BA661C /* Project object */;
 }

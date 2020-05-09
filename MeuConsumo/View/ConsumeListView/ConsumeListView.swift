@@ -19,20 +19,23 @@ struct ConsumeListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    NavigationLink(destination: DetailView(getFakeConsume())) {
-                        ConsumeListViewCell(getFakeConsume())
+                List(self.viewModel.consumes) { consume in
+                    NavigationLink(destination: DetailView(consume)) {
+                        ConsumeListViewCell(consume)
                     }
-                    
                 }
             }
             .navigationBarTitle("Meu Consumo")
-            .navigationBarItems(trailing: Button(
-                action: {
-                    print("Edit button pressed...")
-            }) {
-                Text("Adicionar")
-            })
+            .navigationBarItems(trailing: NavigationBarButton(text: "Adicionar", action: {
+                self.viewModel.isPresentingAddModal.toggle()
+            }))
+        }
+        .accentColor(Color.goldColor)
+        .sheet(isPresented: $viewModel.isPresentingAddModal, content: {
+            InsertionView(vm: self.viewModel)
+        })
+        .onAppear {
+            self.viewModel.fetchList()
         }
     }
     

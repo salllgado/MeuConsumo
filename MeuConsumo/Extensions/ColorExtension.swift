@@ -13,6 +13,8 @@ extension Color {
     static var backgroundColor = Color(UIColor(named: "BackgroundColor") ?? .white)
     
     static var darkBlueColor = Color(UIColor(named: "DarkBlueColor") ?? .black)
+    
+    static var goldColor = Color(UIColor(named: "GoldColor") ?? .yellow)
 }
 
 struct ColorExtension_Previews: PreviewProvider {

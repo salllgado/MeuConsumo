@@ -19,11 +19,25 @@ struct InsertionView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                CustomText(viewModel.textFieldTitle, style: .bold)
+                CustomText("Quantos litros você colocou", style: .bold)
                 TextField("40L", text: $viewModel.textFieldText)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.default)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numbersAndPunctuation)
+                    .padding(.bottom, 16)
+                CustomText("Quantos km está marcando quando você abasteceu", style: .bold)
+                TextField("99999km", text: $viewModel.ammountKmText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    .padding(.bottom, 16)
+                CustomText("Quanto deu o abastecimento", style: .bold)
+                TextField("R$200,00", text: $viewModel.fuelFullValueText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
                 Spacer()
+                CustomPrimaryButton(buttonText: "Salvar", action: {
+                    self.viewModel.saveNewConsume()
+                })
+                
             }
             .padding(.all, 16)
             .navigationBarTitle("Novo consumo")

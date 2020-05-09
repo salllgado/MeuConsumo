@@ -8,16 +8,18 @@
 
 import Foundation
 
-struct Consume {
+struct Consume: Identifiable {
     
+    var id: UUID
     var data: String
     var litros: String
     var valor: String
     var km: String
     var average: String?
     
-    init(litros: String, valor: String, km: String) {
-        self.data = Consume.getDate()
+    init(litros: String, valor: String, km: String, data: String? = nil) {
+        self.id = UUID()
+        self.data = data ?? Consume.getDate()
         self.litros = litros
         self.valor = valor
         self.km = km
@@ -29,5 +31,16 @@ struct Consume {
         let date = Date()
         return dateFormatter.string(from: date)
         
+    }
+}
+
+extension Consume {
+    
+    enum PersistenceKey: String {
+        case data
+        case litros
+        case valor
+        case km
+        case average
     }
 }
