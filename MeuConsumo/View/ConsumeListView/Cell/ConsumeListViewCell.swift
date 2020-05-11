@@ -26,13 +26,13 @@ struct ConsumeListViewCell: View {
                 Text("Litros")
                     .foregroundColor(Color.black)
                     .font(Font.system(size: 14, weight: .medium))
-                CustomText(consume.litros, style: .bold)
+                CustomText("\(consume.litros)L", style: .bold)
             }
             HStack {
                 Text("Kilometragem")
                     .foregroundColor(Color.black)
                     .font(Font.system(size: 14, weight: .medium))
-                CustomText(consume.km, style: .bold)
+                CustomText("\(consume.km)km", style: .bold)
             }
         }
     }

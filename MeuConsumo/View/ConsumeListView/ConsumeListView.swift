@@ -19,10 +19,13 @@ struct ConsumeListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(self.viewModel.consumes) { consume in
-                    NavigationLink(destination: DetailView(consume)) {
-                        ConsumeListViewCell(consume)
+                List {
+                    ForEach(self.viewModel.consumes) { consume in
+                        NavigationLink(destination: DetailView(consume)) {
+                            ConsumeListViewCell(consume)
+                        }
                     }
+                .onDelete(perform: deleteItem)
                 }
             }
             .navigationBarTitle("Meu Consumo")
@@ -37,6 +40,11 @@ struct ConsumeListView: View {
         .onAppear {
             self.viewModel.fetchList()
         }
+    }
+    
+    private func deleteItem(at offset: IndexSet) {
+        self.viewModel.consumes.remove(atOffsets: offset)
+        self.viewModel.updateDatabase()
     }
     
     private func getFakeConsume() -> Consume {

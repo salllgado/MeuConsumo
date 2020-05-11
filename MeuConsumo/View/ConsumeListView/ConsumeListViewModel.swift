@@ -25,12 +25,16 @@ class ConsumeListViewModel: ObservableObject, Identifiable {
     
     func saveNewConsume() {
         let consume = Consume(litros: textFieldText, valor: fuelFullValueText, km: ammountKmText)
-        PersistenceManager.shared.saveConsume(consume)
+        consume.saveInDatabase()
         
         isPresentingAddModal.toggle()
     }
     
     func fetchList() {
         consumes = PersistenceManager.shared.fetchConsumes()
+    }
+    
+    func updateDatabase() {
+        PersistenceManager.shared.updateConsumes(self.consumes)
     }
 }

@@ -71,4 +71,22 @@ struct PersistenceManager {
         
         return consumes
     }
+    
+    func updateConsumes(_ consumes: [Consume]) {
+        guard let context = context else { return }
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ConsumeModel")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try coordinator?.execute(deleteRequest, with: context)
+        } catch {
+            debugPrint("error trying remove consumes")
+        }
+        
+        
+        consumes.forEach { (consume) in
+            self.saveConsume(consume)
+        }
+    }
 }

@@ -25,6 +25,10 @@ struct Consume: Identifiable {
         self.km = km
     }
     
+    func saveInDatabase() {
+        PersistenceManager.shared.saveConsume(self)
+    }
+    
     private static func getDate() -> String {
         let dateFormatter : DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
