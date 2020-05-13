@@ -18,8 +18,13 @@ struct DetailView: View {
     
     var body: some View {
         NavigationView {
-            Text(consume.valor)
-                .navigationBarTitle("Abastecimento do dia \(consume.data)", displayMode: .inline)
+            VStack {
+                RowView(title: "Valor", value: "R$\(consume.valor)")
+                RowView(title: "Litros", value: "\(consume.litros)L")
+                RowView(title: "Valor", value: consume.data)
+                Spacer()
+            }
+//            .navigationBarTitle("Abastecimento do dia \(consume.data)", displayMode: .automatic)
         }
     }
 }
@@ -27,9 +32,9 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         DetailView(Consume(
-            litros: "40L",
-            valor: "134R$",
-            km: "99890KM"
+            litros: "40",
+            valor: "134",
+            km: "99890"
         ))
     }
 }
