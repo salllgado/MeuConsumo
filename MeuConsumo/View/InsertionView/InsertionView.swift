@@ -33,6 +33,11 @@ struct InsertionView: View {
                 TextField("R$200,00", text: $viewModel.fuelFullValueText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.numbersAndPunctuation)
+                    .padding(.bottom, 16)
+                CustomText("Qual foi a data do abastecimento", style: .bold)
+                DatePicker(selection: $viewModel.date, displayedComponents: .date) {
+                    Text("")
+                }
                 Spacer()
                 CustomPrimaryButton(buttonText: "Salvar", action: {
                     self.viewModel.saveNewConsume()

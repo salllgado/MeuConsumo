@@ -28,7 +28,7 @@ struct PersistenceManager {
         guard let consumeEntity = NSEntityDescription.entity(forEntityName: "ConsumeModel", in: context) else { return }
         let consume = NSManagedObject(entity: consumeEntity, insertInto: context)
         
-        consume.setValue(consumeObj.data, forKey: Consume.PersistenceKey.data.rawValue)
+        consume.setValue(consumeObj.date, forKey: Consume.PersistenceKey.data.rawValue)
         consume.setValue(consumeObj.average, forKey: Consume.PersistenceKey.average.rawValue)
         consume.setValue(consumeObj.km, forKey: Consume.PersistenceKey.km.rawValue)
         consume.setValue(consumeObj.litros, forKey: Consume.PersistenceKey.litros.rawValue)

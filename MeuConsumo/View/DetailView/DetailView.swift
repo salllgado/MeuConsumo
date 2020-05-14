@@ -17,15 +17,13 @@ struct DetailView: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack {
-                RowView(title: "Valor", value: "R$\(consume.valor)")
-                RowView(title: "Litros", value: "\(consume.litros)L")
-                RowView(title: "Valor", value: consume.data)
-                Spacer()
-            }
-//            .navigationBarTitle("Abastecimento do dia \(consume.data)", displayMode: .automatic)
+        VStack {
+            RowView(title: "Valor", value: "R$\(consume.valor)")
+            RowView(title: "Litros", value: "\(consume.litros)L")
+            RowView(title: "Data do registro", value: consume.date)
+            Spacer()
         }
+        .navigationBarTitle("Abastecimento do dia \(consume.date)", displayMode: .inline)
     }
 }
 

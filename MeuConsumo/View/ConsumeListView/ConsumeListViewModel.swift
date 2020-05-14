@@ -20,11 +20,12 @@ class ConsumeListViewModel: ObservableObject, Identifiable {
     @Published var textFieldText: String = ""
     @Published var ammountKmText: String = ""
     @Published var fuelFullValueText: String = ""
+    @Published var date: Date = Date()
     
     @Published var consumes: [Consume] = []
     
     func saveNewConsume() {
-        let consume = Consume(litros: textFieldText, valor: fuelFullValueText, km: ammountKmText)
+        let consume = Consume(litros: textFieldText, valor: fuelFullValueText, km: ammountKmText, data: Utils.formatDate(date))
         consume.saveInDatabase()
         
         isPresentingAddModal.toggle()

@@ -11,7 +11,7 @@ import Foundation
 struct Consume: Identifiable {
     
     var id: UUID
-    var data: String
+    var date: String
     var litros: String
     var valor: String
     var km: String
@@ -19,7 +19,7 @@ struct Consume: Identifiable {
     
     init(litros: String, valor: String, km: String, data: String? = nil) {
         self.id = UUID()
-        self.data = data ?? Consume.getDate()
+        self.date = data ?? Consume.getDate()
         self.litros = litros
         self.valor = valor
         self.km = km
@@ -30,11 +30,7 @@ struct Consume: Identifiable {
     }
     
     private static func getDate() -> String {
-        let dateFormatter : DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        let date = Date()
-        return dateFormatter.string(from: date)
-        
+        return Utils.formatDate(Date())
     }
 }
 

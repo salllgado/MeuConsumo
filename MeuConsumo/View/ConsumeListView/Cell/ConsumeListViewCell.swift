@@ -18,7 +18,7 @@ struct ConsumeListViewCell: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            CustomText(consume.data, style: .black)
+            CustomText(consume.date, style: .black)
                 .padding(
                     EdgeInsets(top: 0, leading: 0, bottom: 4, trailing: 0)
             )
