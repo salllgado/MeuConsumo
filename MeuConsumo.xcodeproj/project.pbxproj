@@ -23,6 +23,7 @@
 		B842945B245F0B3200D0ACF7 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B842945A245F0B3200D0ACF7 /* ColorExtension.swift */; };
 		B85CE64F246C266F00811D1E /* DetailRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85CE64E246C266F00811D1E /* DetailRowView.swift */; };
 		B85CE651246C26B700811D1E /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85CE650246C26B700811D1E /* CustomDivider.swift */; };
+		B86C19832479E11F007EA1C3 /* ConsumeListTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86C19822479E11F007EA1C3 /* ConsumeListTextField.swift */; };
 		B88CE34C246CBC14002819A3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88CE34B246CBC14002819A3 /* Utils.swift */; };
 		B8C0CB4A246765C1003BAF42 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C0CB49246765C1003BAF42 /* PersistenceManager.swift */; };
 		B8C0CB4E246766E1003BAF42 /* MeuConsumo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8C0CB4C246766E1003BAF42 /* MeuConsumo.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 		B842945A245F0B3200D0ACF7 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		B85CE64E246C266F00811D1E /* DetailRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRowView.swift; sourceTree = "<group>"; };
 		B85CE650246C26B700811D1E /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
+		B86C19822479E11F007EA1C3 /* ConsumeListTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumeListTextField.swift; sourceTree = "<group>"; };
 		B88CE34B246CBC14002819A3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B8C0CB49246765C1003BAF42 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		B8C0CB4D246766E1003BAF42 /* ConsumeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConsumeModel.xcdatamodel; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				B835B759245DD73700BA661C /* Cell */,
 				B835B746245DD3E600BA661C /* ConsumeListView.swift */,
 				B835B757245DD46200BA661C /* ConsumeListViewModel.swift */,
+				B86C19822479E11F007EA1C3 /* ConsumeListTextField.swift */,
 			);
 			path = ConsumeListView;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				B85CE651246C26B700811D1E /* CustomDivider.swift in Sources */,
 				B835B763245DDF7500BA661C /* ConsumeModel.swift in Sources */,
+				B86C19832479E11F007EA1C3 /* ConsumeListTextField.swift in Sources */,
 				B8C9415624638D7900CA3F4B /* NavigationBarButton.swift in Sources */,
 				B835B743245DD3E600BA661C /* AppDelegate.swift in Sources */,
 				B835B745245DD3E600BA661C /* SceneDelegate.swift in Sources */,

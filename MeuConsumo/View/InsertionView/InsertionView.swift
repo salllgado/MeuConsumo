@@ -20,20 +20,11 @@ struct InsertionView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 CustomText("Quantos litros você colocou", style: .bold)
-                TextField("40L", text: $viewModel.textFieldText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numbersAndPunctuation)
-                    .padding(.bottom, 16)
+                ConsumeListTextField(text: $viewModel.textFieldText, placeholder: "40L", keyboardType: .numbersAndPunctuation)
                 CustomText("Quantos km está marcando quando você abasteceu", style: .bold)
-                TextField("99999km", text: $viewModel.ammountKmText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .padding(.bottom, 16)
+                ConsumeListTextField(text: $viewModel.ammountKmText, placeholder: "99999km", keyboardType: .numberPad)
                 CustomText("Quanto deu o abastecimento", style: .bold)
-                TextField("R$200,00", text: $viewModel.fuelFullValueText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numbersAndPunctuation)
-                    .padding(.bottom, 16)
+                ConsumeListTextField(text: $viewModel.fuelFullValueText, placeholder: "R$200,00", keyboardType: .numbersAndPunctuation)
                 CustomText("Qual foi a data do abastecimento", style: .bold)
                 DatePicker(selection: $viewModel.date, displayedComponents: .date) {
                     Text("")
